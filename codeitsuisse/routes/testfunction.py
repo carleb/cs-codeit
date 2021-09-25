@@ -11,11 +11,11 @@ def testFunction1(input):
     return str(input)
 
 
-@app.route('/testFunction', methods=['POST'])
+@app.route('/stonks', methods=['POST'])
 def testFunction():
     data = request.get_json()
     logging.info("data sent for evaluation {}".format(data))
-    inputValue = data.get("input")
-    result = testFunction1(inputValue)
+    # inputValue = data.get("input")
+    result = testFunction1(data)
     logging.info("My result :{}".format(result))
     return json.dumps(result)

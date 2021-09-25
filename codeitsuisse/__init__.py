@@ -5,5 +5,6 @@ import codeitsuisse.routes.testfunction
 import codeitsuisse.routes.asteroid
 import codeitsuisse.routes.optopt
 import codeitsuisse.routes.parasite
+import codeitsuisse.routes.stonks
 
 
