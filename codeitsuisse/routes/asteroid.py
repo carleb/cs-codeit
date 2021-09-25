@@ -122,7 +122,7 @@ def testFunction1(input):
 def asteroid():
     data = request.get_json()
     logging.info("data sent for evaluation {}".format(data))
-    inputValue = data.get("input")
+    inputValue = data.get("test_cases")
     result = asteroid1(inputValue)
     logging.info("My result :{}".format(result))
     return json.dumps(result)
