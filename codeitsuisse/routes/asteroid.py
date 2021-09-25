@@ -14,7 +14,7 @@ def asteroid1(var1):
 
     
         possible_start = []
-    
+        possible_start_fin = []
     
         for i in range(0,len(test1)-1):
             current = test1[i]
@@ -27,9 +27,19 @@ def asteroid1(var1):
         possible_start = possible_start[1:]
         possible_start = possible_start[:len(possible_start)-1]
         
+        
+        
+        mid_pos_start = len(possible_start)//2
+        possible_start_fin.append(possible_start[mid_pos_start])
+        possible_start_fin.append(possible_start[mid_pos_start]-1)
+        possible_start_fin.append(possible_start[mid_pos_start]-2)
+        possible_start_fin.append(possible_start[mid_pos_start]-3)
+        possible_start_fin.append(possible_start[mid_pos_start]+1)
+        possible_start_fin.append(possible_start[mid_pos_start]+2)
+        possible_start_fin.append(possible_start[mid_pos_start]+3)
         test_res = {}
         max_score = 0
-        for origin in possible_start:
+        for origin in possible_start_fin:
         # origin = 7
         
             left = test1[:origin]
