@@ -103,33 +103,34 @@ def stonk1(input):
         
         yearsToJump = sorted(yearsToJump)
         if totalTransac ==[]:
-            return []
-        res = []
-        starting = 'j-2037-'+str(yearsToJump[0])
-        
-        
-        res.append(starting)
-        for index in range(0,len(yearsToJump)):
-            year = yearsToJump[index]
-            if index == 0:
-                None
-            else:
-                tmp1 = 'j-'+str(yearsToJump[index-1])+"-"+str(yearsToJump[index])
-                res.append(tmp1)
-            for i in totalTransac:
-                buyYear = i[1]
-                whatToBuy = i[0]
-                qty = i[2] 
-                yearToSell = i[3]
-                if buyYear == str(year):
-                    tmp = "b-"+whatToBuy+"-"+str(qty)
-                    # res.insert(len(res),tmp)
-                    res.append(tmp)
-                if yearToSell == str(year):
-                    tmp = "s-"+whatToBuy+"-"+str(qty)
-                    # res.insert(len(res),tmp)
-                    res.append(tmp)
-        
+            res = []
+        else:
+            res = []
+            starting = 'j-2037-'+str(yearsToJump[0])
+            
+            
+            res.append(starting)
+            for index in range(0,len(yearsToJump)):
+                year = yearsToJump[index]
+                if index == 0:
+                    None
+                else:
+                    tmp1 = 'j-'+str(yearsToJump[index-1])+"-"+str(yearsToJump[index])
+                    res.append(tmp1)
+                for i in totalTransac:
+                    buyYear = i[1]
+                    whatToBuy = i[0]
+                    qty = i[2] 
+                    yearToSell = i[3]
+                    if buyYear == str(year):
+                        tmp = "b-"+whatToBuy+"-"+str(qty)
+                        # res.insert(len(res),tmp)
+                        res.append(tmp)
+                    if yearToSell == str(year):
+                        tmp = "s-"+whatToBuy+"-"+str(qty)
+                        # res.insert(len(res),tmp)
+                        res.append(tmp)
+            
 
         fin_res.append(res)
     return fin_res
