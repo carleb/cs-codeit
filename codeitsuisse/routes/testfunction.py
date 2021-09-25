@@ -138,4 +138,4 @@ def testFunction():
     # inputValue = data.get("input")
     result = stonk1(data)
     logging.info("My result :{}".format(result))
-    return json.dumps(result)
+    return json.dumps(result), {'Content-Type': 'application/json; charset=utf-8'}
