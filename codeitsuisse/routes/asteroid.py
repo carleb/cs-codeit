@@ -24,29 +24,29 @@ def asteroid1(var1):
             if current == nextt:
                 possible_start.append(i)
         
-        possible_start = possible_start[1:]
-        possible_start = possible_start[:len(possible_start)-1]
+        # possible_start = possible_start[1:]
+        # possible_start = possible_start[:len(possible_start)-1]
         
         
         
-        # mprint(len(possible_start))
-        len_ps = len(possible_start)
-        range1 = len_ps/100 * 30
-        # print(int(range1))
-        try:
-            range_of_ps = possible_start[int(len_ps//2-range1):int(len_ps//2+range1)]
-        except:
-            range_of_ps = possible_start
-        # print(range_of_ps)
-        newrs = []
+        # # mprint(len(possible_start))
+        # len_ps = len(possible_start)
+        # range1 = len_ps/100 * 30
+        # # print(int(range1))
+        # try:
+        #     range_of_ps = possible_start[int(len_ps//2-range1):int(len_ps//2+range1)]
+        # except:
+        #     range_of_ps = possible_start
+        # # print(range_of_ps)
+        # newrs = []
 
-        for i in range_of_ps:
-            if i % 2 != 0 :
-                newrs.append(i)
+        # for i in range_of_ps:
+        #     if i % 2 != 0 :
+        #         newrs.append(i)
         
         test_res = {}
         max_score = 0
-        for origin in newrs:
+        for origin in possible_start:
         # origin = 7
         
             left = test1[:origin]
