@@ -107,7 +107,8 @@ def stonk1(input):
         else:
             res = []
             starting = 'j-2037-'+str(yearsToJump[0])
-            
+            if 2037 not in yearsToJump:
+                yearsToJump.append(2037)
             
             res.append(starting)
             for index in range(0,len(yearsToJump)):
