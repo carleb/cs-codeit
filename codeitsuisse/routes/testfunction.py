@@ -102,7 +102,8 @@ def stonk1(input):
             # print('capitalleft',capital)
         
         yearsToJump = sorted(yearsToJump)
-        
+        if totalTransac ==[]:
+            return []
         res = []
         starting = 'j-2037-'+str(yearsToJump[0])
         
