@@ -79,11 +79,14 @@ def stonk1(input):
             priceToBuy = stockRecord[0][1]['price']
             qty_bought = capital//priceToBuy
             yearToSell = stockRecord[1][0]
-            capital = capital - (qty_bought*priceToBuy)
+            
             # print(capital)
-            transac = [stockToBuy,yearToBuy,qty_bought,yearToSell]
-            if qty_bought != 0:
-                totalTransac.append(transac)
+            if int(yearToBuy) < int(yearToSell):
+                transac = [stockToBuy,yearToBuy,qty_bought,yearToSell]
+                capital = capital - (qty_bought*priceToBuy)
+                # print(transac)
+                if qty_bought != 0:
+                    totalTransac.append(transac)
             counter += 1
             
             if int(yearToBuy)not in yearsToJump:
